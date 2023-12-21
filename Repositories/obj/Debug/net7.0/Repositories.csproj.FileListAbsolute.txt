@@ -1,0 +1,15 @@
+C:\Users\İLKER GÖKŞEN\OneDrive\Masaüstü\MVC_BTK\Store\Repositories\bin\Debug\net7.0\Repositories.deps.json
+C:\Users\İLKER GÖKŞEN\OneDrive\Masaüstü\MVC_BTK\Store\Repositories\bin\Debug\net7.0\Repositories.dll
+C:\Users\İLKER GÖKŞEN\OneDrive\Masaüstü\MVC_BTK\Store\Repositories\bin\Debug\net7.0\Repositories.pdb
+C:\Users\İLKER GÖKŞEN\OneDrive\Masaüstü\MVC_BTK\Store\Repositories\obj\Debug\net7.0\Repositories.csproj.AssemblyReference.cache
+C:\Users\İLKER GÖKŞEN\OneDrive\Masaüstü\MVC_BTK\Store\Repositories\obj\Debug\net7.0\Repositories.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\İLKER GÖKŞEN\OneDrive\Masaüstü\MVC_BTK\Store\Repositories\obj\Debug\net7.0\Repositories.AssemblyInfoInputs.cache
+C:\Users\İLKER GÖKŞEN\OneDrive\Masaüstü\MVC_BTK\Store\Repositories\obj\Debug\net7.0\Repositories.AssemblyInfo.cs
+C:\Users\İLKER GÖKŞEN\OneDrive\Masaüstü\MVC_BTK\Store\Repositories\obj\Debug\net7.0\Repositories.csproj.CoreCompileInputs.cache
+C:\Users\İLKER GÖKŞEN\OneDrive\Masaüstü\MVC_BTK\Store\Repositories\obj\Debug\net7.0\Repositories.dll
+C:\Users\İLKER GÖKŞEN\OneDrive\Masaüstü\MVC_BTK\Store\Repositories\obj\Debug\net7.0\refint\Repositories.dll
+C:\Users\İLKER GÖKŞEN\OneDrive\Masaüstü\MVC_BTK\Store\Repositories\obj\Debug\net7.0\Repositories.pdb
+C:\Users\İLKER GÖKŞEN\OneDrive\Masaüstü\MVC_BTK\Store\Repositories\obj\Debug\net7.0\ref\Repositories.dll
+C:\Users\İLKER GÖKŞEN\OneDrive\Masaüstü\MVC_BTK\Store\Repositories\bin\Debug\net7.0\Entities.dll
+C:\Users\İLKER GÖKŞEN\OneDrive\Masaüstü\MVC_BTK\Store\Repositories\bin\Debug\net7.0\Entities.pdb
+C:\Users\İLKER GÖKŞEN\OneDrive\Masaüstü\MVC_BTK\Store\Repositories\obj\Debug\net7.0\Repositories.csproj.CopyComplete
