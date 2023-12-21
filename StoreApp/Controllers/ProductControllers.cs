@@ -5,7 +5,7 @@ using Entities.Models;
 
 namespace StoreApp.Controllers
 {
-    //kolay yoldan veritabanı erişimi
+
     public class ProductController : Controller
     {
         private readonly RepositoryContext _context;
