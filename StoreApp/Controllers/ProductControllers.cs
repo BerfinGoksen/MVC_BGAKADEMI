@@ -3,26 +3,28 @@ using Microsoft.EntityFrameworkCore;
 using Repositories;
 using Repositories.Contracts;
 using Entities.Models;
+using Services;
+using Services.Contracts;
 
 namespace StoreApp.Controllers
 {
     //kolay yoldan veritabanı erişimi
     public class ProductController : Controller
     {
-        private readonly IRepositoryManager _manager;
-        public ProductController(IRepositoryManager manager)
+        private readonly IServiceManager _manager;
+        public ProductController(IServiceManager manager)
         {
             _manager = manager;
         }
 
         public IActionResult Index()
         {
-            var model = _manager.Product.GetAllProducts(false);
+            var model = _manager.ProductService.GetAllProducts(false);
             return View(model);
         }
         public IActionResult Get(int id)
         {
-            var model = _manager.Product.GetOneProduct(id, false);
+            var model = _manager.ProductService.GetOneProduct(id, false);
             return View(model);
         }
     }
