@@ -5,7 +5,8 @@
             Berfin Gökşen
             Akademi</a>
         <a class="nav-link active" aria-current="page" asp-controller="Home" asp-action="Index">Home</a>
-        <a class="nav-link active" aria-current="page" asp-controller="Product" asp-action="Index">Product</a>
+        <a class="nav-link active" aria-current="page" asp-controller="Product" asp-action="Index">Products
+            (@await Component.InvokeAsync("ProductSummary"))</a>
         <a class="nav-link active" aria-current="page" asp-controller="Category" asp-action="Index">Categories</a>
         <form class="d-flex" role="search">
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">

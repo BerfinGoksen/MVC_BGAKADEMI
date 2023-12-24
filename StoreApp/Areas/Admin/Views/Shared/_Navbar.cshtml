@@ -1,0 +1,19 @@
+<nav class="navbar bg-dark" data-bs-theme="dark">
+    <div class="container-fluid">
+        <a class="nav-link text-white" aria-current="page" asp-controller="Dashboard" asp-action="Index">
+            <i class="fa-solid fa-house"></i>
+            Admin Panel</a>
+        @* <div class="collapse navbar-collapse" id="navbarNavAltMarkup"> *@
+        <a class="nav-link text-white" aria-current="page" asp-controller="Dashboard" asp-action="Index">Dashboard</a>
+        <a class="nav-link text-white" aria-current="page" asp-controller="Product" asp-action="Index">Products
+            (@await Component.InvokeAsync("ProductSummary"))</a>
+        <a class="nav-link text-white" aria-current="page" asp-controller="Category" asp-action="Index">Categories</a>
+        @* <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-light" type="submit">Search</button>
+        </form> *@
+        <a target="_blank" class="nav-link text-white" aria-current="page" asp-area="" asp-controller="Home"
+            asp-action="Index">Home</a>
+
+    </div>
+</nav>
