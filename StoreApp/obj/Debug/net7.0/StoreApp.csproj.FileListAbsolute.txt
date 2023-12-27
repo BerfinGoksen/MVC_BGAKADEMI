@@ -71,3 +71,5 @@ C:\Users\İLKER GÖKŞEN\OneDrive\Masaüstü\MVC_BTK\Store\StoreApp\bin\Debug\ne
 C:\Users\İLKER GÖKŞEN\OneDrive\Masaüstü\MVC_BTK\Store\StoreApp\obj\Debug\net7.0\StoreApp.sourcelink.json
 C:\Users\İLKER GÖKŞEN\OneDrive\Masaüstü\MVC_BTK\Store\StoreApp\bin\Debug\net7.0\Services.dll
 C:\Users\İLKER GÖKŞEN\OneDrive\Masaüstü\MVC_BTK\Store\StoreApp\bin\Debug\net7.0\Services.pdb
+C:\Users\İLKER GÖKŞEN\OneDrive\Masaüstü\MVC_BTK\Store\StoreApp\bin\Debug\net7.0\AutoMapper.dll
+C:\Users\İLKER GÖKŞEN\OneDrive\Masaüstü\MVC_BTK\Store\StoreApp\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

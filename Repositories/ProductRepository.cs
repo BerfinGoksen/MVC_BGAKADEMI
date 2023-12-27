@@ -16,8 +16,10 @@ namespace Repositories
         public Product? GetOneProduct(int id, bool trackChanges)
         {
             return FindByCondition(p => p.ProductId.Equals(id), trackChanges);
-
         }
+
+        public void UpdateOneProduct(Product entity) => UpdateOneProduct(entity);
+
 
 
     }

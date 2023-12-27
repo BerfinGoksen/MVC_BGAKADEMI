@@ -1,10 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "QqM9s6JDW7MyGJ/pzAlSK115tmrwR+3NWXzBV0DsQlzvgxBIk9GtRkdZnewBx1kBnNzJpJ0zKHBFBlbDGQpbHw==",
+  "dgSpecHash": "vl/UK/hVbtgMN6JsSExZoIVYt1jyvIEEpXLbkWIlgTBHLyC4IWpQx7b7l8zcjujmXkndp74X/7ziBNVBmg/jAQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\İLKER GÖKŞEN\\OneDrive\\Masaüstü\\MVC_BTK\\Store\\StoreApp\\StoreApp.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\İLKER GÖKŞEN\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\İLKER GÖKŞEN\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "C:\\Users\\İLKER GÖKŞEN\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
+    "C:\\Users\\İLKER GÖKŞEN\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\İLKER GÖKŞEN\\.nuget\\packages\\microsoft.data.sqlite.core\\7.0.0\\microsoft.data.sqlite.core.7.0.0.nupkg.sha512",
     "C:\\Users\\İLKER GÖKŞEN\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.0\\microsoft.entityframeworkcore.7.0.0.nupkg.sha512",
     "C:\\Users\\İLKER GÖKŞEN\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.0\\microsoft.entityframeworkcore.abstractions.7.0.0.nupkg.sha512",

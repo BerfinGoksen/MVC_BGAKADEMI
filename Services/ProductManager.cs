@@ -1,23 +1,28 @@
 using Services.Contracts;
 using Repositories.Contracts;
-using Entities;
 using Entities.Models;
-using System; // Eklediğimiz hatayı fırlatmak için System namespace'i ekledik.
-using System.Collections.Generic; // IEnumerable kullanabilmek için ekledik.
+using Entities;
+using Entities.Dtos;
+using System;
+using System.Collections.Generic;
+using AutoMapper;
 
 namespace Services
 {
     public class ProductManager : IProductService
     {
         private readonly IRepositoryManager _manager;
+        private readonly IMapper _mapper;
 
-        public ProductManager(IRepositoryManager manager)
+        public ProductManager(IRepositoryManager manager, IMapper mapper)
         {
             _manager = manager;
+            _mapper = mapper;
         }
 
-        public void CreateProduct(Product product)
+        public void CreateProduct(ProductDtoForInsertion productDto)
         {
+            Product product = _mapper.Map<Product>(productDto);
             _manager.Product.Create(product);
             _manager.Save();
         }
@@ -25,7 +30,7 @@ namespace Services
         public void DeleteOneProduct(int id)
         {
             var product = GetOneProduct(id, false);
-            if (product != null) // "if (product id not null)" kısmını düzelttik
+            if (product != null)
             {
                 _manager.Product.DeleteOneProduct(product);
                 _manager.Save();
@@ -41,7 +46,7 @@ namespace Services
         {
             Product product = _manager.Product.GetOneProduct(id, trackChanges);
 
-            if (product == null) // "if (product is null)" kısmını düzelttik
+            if (product == null)
             {
                 throw new Exception("Product not found!");
             }
@@ -49,12 +54,29 @@ namespace Services
             return product;
         }
 
-        public void UpdateOneProduct(Product product)
+        public ProductDtoForUpdate GetProductDtoForUpdate(int id, bool trackChanges)
         {
-            var entity = _manager.Product.GetOneProduct(product.ProductId, true);
-            entity.ProductName = product.ProductName;
-            entity.Price = product.Price;
+            var product = GetOneProduct(id, trackChanges);
+            var productDtoForUpdate = _mapper.Map<ProductDtoForUpdate>(product);
+            return productDtoForUpdate;
+        }
+
+        public void UpdateOneProduct(ProductDtoForUpdate productDto)
+        {
+            // var entity = _manager.Product.GetOneProduct(productDto.ProductId, true);
+            // entity.ProductName = productDto.ProductName;
+            // entity.Price = productDto.Price;
+            // entitiy.CategoryId = productDto.CategoryId;
+            var entity = _mapper.Map<Product>(productDto);
+            _manager.Product.UpdateOneProduct(entity);
             _manager.Save();
+        }
+
+        public ProductDtoForUpdate GetOneProductForUpdate(int productId, bool includeRelatedEntities)
+        {
+            var product = GetOneProduct(productId, includeRelatedEntities);
+            var productDtoForUpdate = _mapper.Map<ProductDtoForUpdate>(product);
+            return productDtoForUpdate;
         }
     }
 }
