@@ -9,6 +9,14 @@
       "PackagePath": "staticwebassets\\html\\Error.html"
     },
     {
+      "Id": "C:\\Users\\İLKER GÖKŞEN\\OneDrive\\Masaüstü\\MVC_BTK\\Store\\StoreApp\\wwwroot\\images\\a.png",
+      "PackagePath": "staticwebassets\\images\\a.png"
+    },
+    {
+      "Id": "C:\\Users\\İLKER GÖKŞEN\\OneDrive\\Masaüstü\\MVC_BTK\\Store\\StoreApp\\wwwroot\\images\\kediş.jpg",
+      "PackagePath": "staticwebassets\\images\\kediş.jpg"
+    },
+    {
       "Id": "C:\\Users\\İLKER GÖKŞEN\\OneDrive\\Masaüstü\\MVC_BTK\\Store\\StoreApp\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
