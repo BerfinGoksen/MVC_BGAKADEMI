@@ -1,11 +1,12 @@
-using Services.Contracts;
-using Repositories.Contracts;
-using Entities.Models;
-using Entities;
-using Entities.Dtos;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using AutoMapper;
+using Entities.Models;
+using Entities.Dtos;
+using Entities.RequestParameters;
+using Repositories.Contracts;
+using Services.Contracts;
 
 namespace Services
 {
@@ -42,6 +43,11 @@ namespace Services
             return _manager.Product.GetAllProducts(trackChanges);
         }
 
+        public IEnumerable<Product> GetAllProductsWithDetails(ProductRequestParameters p)
+        {
+            return _manager.Product.GetAllProductsWithDetails(p);
+        }
+
         public Product GetOneProduct(int id, bool trackChanges)
         {
             Product product = _manager.Product.GetOneProduct(id, trackChanges);
@@ -63,10 +69,6 @@ namespace Services
 
         public void UpdateOneProduct(ProductDtoForUpdate productDto)
         {
-            // var entity = _manager.Product.GetOneProduct(productDto.ProductId, true);
-            // entity.ProductName = productDto.ProductName;
-            // entity.Price = productDto.Price;
-            // entitiy.CategoryId = productDto.CategoryId;
             var entity = _mapper.Map<Product>(productDto);
             _manager.Product.UpdateOneProduct(entity);
             _manager.Save();
@@ -78,5 +80,12 @@ namespace Services
             var productDtoForUpdate = _mapper.Map<ProductDtoForUpdate>(product);
             return productDtoForUpdate;
         }
+
+        public IEnumerable<Product> GetShowCaseProducts(bool trackChanges)
+        {
+            var products = _manager.Product.GetShowCaseProducts(trackChanges);
+            return products;
+        }
     }
 }
+

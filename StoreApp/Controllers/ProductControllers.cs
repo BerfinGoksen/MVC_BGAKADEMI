@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Repositories;
 using Repositories.Contracts;
 using Entities.Models;
+using Entities.RequestParameters;
 using Services;
 using Services.Contracts;
 
@@ -17,9 +18,9 @@ namespace StoreApp.Controllers
             _manager = manager;
         }
 
-        public IActionResult Index()
+        public IActionResult Index(ProductRequestParameters p)
         {
-            var model = _manager.ProductService.GetAllProducts(false);
+            var model = _manager.ProductService.GetAllProductsWithDetails(p);
             return View(model);
         }
         public IActionResult Get(int id)

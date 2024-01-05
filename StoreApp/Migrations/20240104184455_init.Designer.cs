@@ -11,8 +11,8 @@ using Repositories;
 namespace StoreApp.Migrations
 {
     [DbContext(typeof(RepositoryContext))]
-    [Migration("20240101214115_start")]
-    partial class start
+    [Migration("20240104184455_init")]
+    partial class init
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -127,6 +127,9 @@ namespace StoreApp.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
+                    b.Property<bool>("ShowCase")
+                        .HasColumnType("INTEGER");
+
                     b.Property<string>("Summary")
                         .HasColumnType("TEXT");
 
@@ -144,6 +147,7 @@ namespace StoreApp.Migrations
                             ImageUrl = "/images/kediş.jpg",
                             Price = 10000m,
                             ProductName = "Computer",
+                            ShowCase = false,
                             Summary = ""
                         },
                         new
@@ -153,6 +157,7 @@ namespace StoreApp.Migrations
                             ImageUrl = "/images/kediş.jpg",
                             Price = 1000m,
                             ProductName = "Keyboard",
+                            ShowCase = false,
                             Summary = ""
                         },
                         new
@@ -162,6 +167,7 @@ namespace StoreApp.Migrations
                             ImageUrl = "/images/kediş.jpg",
                             Price = 600m,
                             ProductName = "Mouse",
+                            ShowCase = false,
                             Summary = ""
                         },
                         new
@@ -171,6 +177,47 @@ namespace StoreApp.Migrations
                             ImageUrl = "/images/kediş.jpg",
                             Price = 6000m,
                             ProductName = "Monitor",
+                            ShowCase = false,
+                            Summary = ""
+                        },
+                        new
+                        {
+                            ProductId = 5,
+                            CategoryId = 2,
+                            ImageUrl = "/images/kediş.jpg",
+                            Price = 10000m,
+                            ProductName = "Earphones",
+                            ShowCase = false,
+                            Summary = ""
+                        },
+                        new
+                        {
+                            ProductId = 6,
+                            CategoryId = 2,
+                            ImageUrl = "/images/kediş.jpg",
+                            Price = 1000m,
+                            ProductName = "Berfin",
+                            ShowCase = true,
+                            Summary = ""
+                        },
+                        new
+                        {
+                            ProductId = 7,
+                            CategoryId = 1,
+                            ImageUrl = "/images/kediş.jpg",
+                            Price = 600m,
+                            ProductName = "Beyza",
+                            ShowCase = true,
+                            Summary = ""
+                        },
+                        new
+                        {
+                            ProductId = 8,
+                            CategoryId = 1,
+                            ImageUrl = "/images/kediş.jpg",
+                            Price = 6000m,
+                            ProductName = "İlker",
+                            ShowCase = true,
                             Summary = ""
                         });
                 });

@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace StoreApp.Migrations
 {
     /// <inheritdoc />
-    public partial class start : Migration
+    public partial class init : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -56,7 +56,8 @@ namespace StoreApp.Migrations
                     Price = table.Column<decimal>(type: "TEXT", nullable: false),
                     Summary = table.Column<string>(type: "TEXT", nullable: true),
                     ImageUrl = table.Column<string>(type: "TEXT", nullable: true),
-                    CategoryId = table.Column<int>(type: "INTEGER", nullable: true)
+                    CategoryId = table.Column<int>(type: "INTEGER", nullable: true),
+                    ShowCase = table.Column<bool>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -105,13 +106,17 @@ namespace StoreApp.Migrations
 
             migrationBuilder.InsertData(
                 table: "Products",
-                columns: new[] { "ProductId", "CategoryId", "ImageUrl", "Price", "ProductName", "Summary" },
+                columns: new[] { "ProductId", "CategoryId", "ImageUrl", "Price", "ProductName", "ShowCase", "Summary" },
                 values: new object[,]
                 {
-                    { 1, 2, "/images/kediş.jpg", 10000m, "Computer", "" },
-                    { 2, 2, "/images/kediş.jpg", 1000m, "Keyboard", "" },
-                    { 3, 1, "/images/kediş.jpg", 600m, "Mouse", "" },
-                    { 4, 1, "/images/kediş.jpg", 6000m, "Monitor", "" }
+                    { 1, 2, "/images/kediş.jpg", 10000m, "Computer", false, "" },
+                    { 2, 2, "/images/kediş.jpg", 1000m, "Keyboard", false, "" },
+                    { 3, 1, "/images/kediş.jpg", 600m, "Mouse", false, "" },
+                    { 4, 1, "/images/kediş.jpg", 6000m, "Monitor", false, "" },
+                    { 5, 2, "/images/kediş.jpg", 10000m, "Earphones", false, "" },
+                    { 6, 2, "/images/kediş.jpg", 1000m, "Berfin", true, "" },
+                    { 7, 1, "/images/kediş.jpg", 600m, "Beyza", true, "" },
+                    { 8, 1, "/images/kediş.jpg", 6000m, "İlker", true, "" }
                 });
 
             migrationBuilder.CreateIndex(
