@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Repositories.Contracts;
 using Repositories.Extensions;
 
+
 namespace Repositories
 {
     public class ProductRepository : RepositoryBase<Product>, IProductRepository
@@ -25,8 +26,8 @@ namespace Repositories
                 .Products
                 .FilteredByCategoryId(p.CategoryId)
                 .FilteredBySearchTerm(p.SearchTerm)
-                .FilteredByPrice(p.MinPrice, p.MaxPrice, p.IsValidPrice);
-            // .ToPaginate(p.PageNumber, p.PageSize);
+                .FilteredByPrice(p.MinPrice, p.MaxPrice, p.IsValidPrice)
+                .ToPaginate(p.PageNumber, p.PageSize);
         }
 
         public IQueryable<Product> GetShowCaseProducts(bool trackChanges)
