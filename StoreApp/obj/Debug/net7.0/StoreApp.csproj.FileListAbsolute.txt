@@ -73,3 +73,7 @@ C:\Users\İLKER GÖKŞEN\OneDrive\Masaüstü\MVC_BTK\Store\StoreApp\bin\Debug\ne
 C:\Users\İLKER GÖKŞEN\OneDrive\Masaüstü\MVC_BTK\Store\StoreApp\bin\Debug\net7.0\Services.pdb
 C:\Users\İLKER GÖKŞEN\OneDrive\Masaüstü\MVC_BTK\Store\StoreApp\bin\Debug\net7.0\AutoMapper.dll
 C:\Users\İLKER GÖKŞEN\OneDrive\Masaüstü\MVC_BTK\Store\StoreApp\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\İLKER GÖKŞEN\OneDrive\Masaüstü\MVC_BTK\Store\StoreApp\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\İLKER GÖKŞEN\OneDrive\Masaüstü\MVC_BTK\Store\StoreApp\obj\Debug\net7.0\StoreApp.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\İLKER GÖKŞEN\OneDrive\Masaüstü\MVC_BTK\Store\StoreApp\bin\Debug\net7.0\Presentation.dll
+C:\Users\İLKER GÖKŞEN\OneDrive\Masaüstü\MVC_BTK\Store\StoreApp\bin\Debug\net7.0\Presentation.pdb

@@ -1,5 +1,11 @@
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using StoreApp.InfraSctructe.Extensions;
+using StoreApp.InfraSctructe;
+using System;
+using System.Linq;
 using Repositories;
 
 namespace StoreApp.InfraSctructe.Extensions
@@ -8,19 +14,18 @@ namespace StoreApp.InfraSctructe.Extensions
     {
         public static void ConfigureAndCheckMigration(this IApplicationBuilder app)
         {
-            RepositoryContext context = app
-                .ApplicationServices
-                .CreateScope()
-                .ServiceProvider
-                .GetRequiredService<RepositoryContext>();
-
-            if (context.Database.GetPendingMigrations().Any())  //dotnet ef database update
+            using (var serviceScope = app.ApplicationServices.GetRequiredService<IServiceScopeFactory>().CreateScope())
             {
-                context.Database.Migrate();
+                RepositoryContext context = serviceScope.ServiceProvider.GetRequiredService<RepositoryContext>();
+
+                if (context.Database.GetPendingMigrations().Any())
+                {
+                    context.Database.Migrate();
+                }
             }
         }
 
-        public static void ConfigureLocalization(this WebApplication app)  //para birimi sembolü desteği için
+        public static void ConfigureLocalization(this IApplicationBuilder app)  // para birimi sembolü desteği için
         {
             app.UseRequestLocalization(options =>
             {
@@ -30,50 +35,42 @@ namespace StoreApp.InfraSctructe.Extensions
             });
         }
 
-        // public static async void ConfigureDefaultAdminUser(this IApplicationBuilder app)
-        // {
-        //     const string adminUser = "Admin";
-        //     const string adminPassword = "Admin+123456";
+        public static async void ConfigureDefaultAdminUser(this IApplicationBuilder app)
+        {
+            const string adminUser = "Admin";
+            const string adminPassword = "Admin+123456";
 
-        //     // UserManager
-        //     UserManager<IdentityUser> userManager = app
-        //         .ApplicationServices
-        //         .CreateScope()
-        //         .ServiceProvider
-        //         .GetRequiredService<UserManager<IdentityUser>>();
+            using (var serviceScope = app.ApplicationServices.GetRequiredService<IServiceScopeFactory>().CreateScope())
+            {
+                // UserManager
+                UserManager<IdentityUser> userManager = serviceScope.ServiceProvider.GetRequiredService<UserManager<IdentityUser>>();
 
-        //     // RoleManager
-        //     RoleManager<IdentityRole> roleManager = app
-        //         .ApplicationServices
-        //         .CreateAsyncScope()
-        //         .ServiceProvider
-        //         .GetRequiredService<RoleManager<IdentityRole>>();
+                // RoleManager
+                RoleManager<IdentityRole> roleManager = serviceScope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
 
-        //     IdentityUser user = await userManager.FindByNameAsync(adminUser);
-        //     if (user is null)
-        //     {
-        //         user = new IdentityUser()
-        //         {
-        //             Email = "zcomert@samsun.edu.tr",
-        //             PhoneNumber = "5061112233",
-        //             UserName = adminUser,
-        //         };
+                IdentityUser user = await userManager.FindByNameAsync(adminUser);
+                if (user is null)
+                {
+                    user = new IdentityUser()
+                    {
+                        Email = "berfingoksen24@gmail.com",
+                        PhoneNumber = "5432266993",
+                        UserName = adminUser,
+                    };
 
-        //         var result = await userManager.CreateAsync(user, adminPassword);
+                    var result = await userManager.CreateAsync(user, adminPassword);
 
-        //         if (!result.Succeeded)
-        //             throw new Exception("Admin user could not been created.");
+                    if (!result.Succeeded)
+                        throw new Exception("Admin user could not be created.");
 
-        //         var roleResult = await userManager.AddToRolesAsync(user,
-        //             roleManager
-        //                 .Roles
-        //                 .Select(r => r.Name)
-        //                 .ToList()
-        //         );
+                    var roleResult = await userManager.AddToRolesAsync(user,
+                        roleManager.Roles.Select(r => r.Name).ToList()
+                    );
 
-        //         if (!roleResult.Succeeded)
-        //             throw new Exception("System have problems with role defination for admin.");
-        //     }
-        // }
+                    if (!roleResult.Succeeded)
+                        throw new Exception("System has problems with role definition for admin.");
+                }
+            }
+        }
     }
 }

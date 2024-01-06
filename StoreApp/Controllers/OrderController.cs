@@ -15,7 +15,7 @@ namespace StoreApp.Controllers
             _manager = manager;
             _cart = cart;
         }
-
+        [Authorize]
         public ViewResult Checkout() => View(new Order());
 
         [HttpPost]

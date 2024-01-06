@@ -18,22 +18,23 @@ namespace StoreApp.InfraSctructe.Extensions
             {
                 options.UseSqlite(configuration.GetConnectionString("sqlconnection"),
                     b => b.MigrationsAssembly("StoreApp"));
+                options.EnableSensitiveDataLogging(true);
             });
         }
 
-        // public static void ConfigureIdentity(this IServiceCollection services)
-        // {
-        //     services.AddIdentity<IdentityUser, IdentityRole>(options =>
-        //     {
-        //         options.SignIn.RequireConfirmedAccount = false;
-        //         options.User.RequireUniqueEmail = true;
-        //         options.Password.RequireUppercase = false;
-        //         options.Password.RequireLowercase = false;
-        //         options.Password.RequireDigit = false;
-        //         options.Password.RequiredLength = 6;
-        //     })
-        //     .AddEntityFrameworkStores<RepositoryContext>();
-        // }
+        public static void ConfigureIdentity(this IServiceCollection services)
+        {
+            services.AddIdentity<IdentityUser, IdentityRole>(options =>
+            {
+                options.SignIn.RequireConfirmedAccount = false;
+                options.User.RequireUniqueEmail = true;
+                options.Password.RequireUppercase = false;
+                options.Password.RequireLowercase = false;
+                options.Password.RequireDigit = false;
+                options.Password.RequiredLength = 6;
+            })
+            .AddEntityFrameworkStores<RepositoryContext>();
+        }
 
         public static void ConfigureSession(this IServiceCollection services)
         {
@@ -61,26 +62,26 @@ namespace StoreApp.InfraSctructe.Extensions
             services.AddScoped<IProductService, ProductManager>();
             services.AddScoped<ICategoryService, CategoryManager>();
             services.AddScoped<IOrderService, OrderManager>();
-            // services.AddScoped<IAuthService, AuthManager>();
+            services.AddScoped<IAuthService, AuthManager>();
         }
 
-        // public static void ConfigureApplicationCookie(this IServiceCollection services)
-        // {
-        //     services.ConfigureApplicationCookie(options =>
-        //     {
-        //         options.LoginPath = new PathString("/Account/Login");
-        //         options.ReturnUrlParameter = CookieAuthenticationDefaults.ReturnUrlParameter;
-        //         options.ExpireTimeSpan = TimeSpan.FromMinutes(10);
-        //         options.AccessDeniedPath = new PathString("/Account/AccessDenied");
-        //     });
-        // }
+        public static void ConfigureApplicationCookie(this IServiceCollection services)
+        {
+            services.ConfigureApplicationCookie(options =>
+           {
+               options.LoginPath = new PathString("/Account/Login");
+               options.ReturnUrlParameter = CookieAuthenticationDefaults.ReturnUrlParameter;
+               options.ExpireTimeSpan = TimeSpan.FromMinutes(10);
+               options.AccessDeniedPath = new PathString("/Account/AccessDenied");
+           });
+        }
 
         public static void ConfigureRouting(this IServiceCollection services)  //urlde sadece küçük harfler olsun
         {
             services.AddRouting(options =>
             {
                 options.LowercaseUrls = true;
-                options.AppendTrailingSlash = false; //sone / eklensin mi eklenmesin mi
+                options.AppendTrailingSlash = true; //sona / eklensin mi eklenmesin mi
             });
         }
     }

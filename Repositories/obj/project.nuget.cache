@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "U2fZevD+7N1SdISKbhIHpsIQPAZGFnuTAJof2HNRD4ED7abgj/wEvjvtO1IrHOatgLDmBTmBnA5YFHUFDLODQw==",
+  "dgSpecHash": "oCx42a+WsV8Y/nMdw5Q/wWDVyl49d+hSMZDfo/YDJJ4SzcmaFiL1LIdC4G2+6K/9v9bOQKkuSrI78RKS8XmyaA==",
   "success": true,
   "projectFilePath": "C:\\Users\\İLKER GÖKŞEN\\OneDrive\\Masaüstü\\MVC_BTK\\Store\\Repositories\\Repositories.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\İLKER GÖKŞEN\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\6.0.0\\microsoft.aspnetcore.cryptography.internal.6.0.0.nupkg.sha512",
+    "C:\\Users\\İLKER GÖKŞEN\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\6.0.0\\microsoft.aspnetcore.cryptography.keyderivation.6.0.0.nupkg.sha512",
+    "C:\\Users\\İLKER GÖKŞEN\\.nuget\\packages\\microsoft.aspnetcore.identity.entityframeworkcore\\6.0.0\\microsoft.aspnetcore.identity.entityframeworkcore.6.0.0.nupkg.sha512",
     "C:\\Users\\İLKER GÖKŞEN\\.nuget\\packages\\microsoft.data.sqlite.core\\7.0.0\\microsoft.data.sqlite.core.7.0.0.nupkg.sha512",
     "C:\\Users\\İLKER GÖKŞEN\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.0\\microsoft.entityframeworkcore.7.0.0.nupkg.sha512",
     "C:\\Users\\İLKER GÖKŞEN\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\7.0.0\\microsoft.entityframeworkcore.abstractions.7.0.0.nupkg.sha512",
@@ -17,6 +20,8 @@
     "C:\\Users\\İLKER GÖKŞEN\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\7.0.0\\microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",
     "C:\\Users\\İLKER GÖKŞEN\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\microsoft.extensions.dependencyinjection.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\İLKER GÖKŞEN\\.nuget\\packages\\microsoft.extensions.dependencymodel\\7.0.0\\microsoft.extensions.dependencymodel.7.0.0.nupkg.sha512",
+    "C:\\Users\\İLKER GÖKŞEN\\.nuget\\packages\\microsoft.extensions.identity.core\\6.0.0\\microsoft.extensions.identity.core.6.0.0.nupkg.sha512",
+    "C:\\Users\\İLKER GÖKŞEN\\.nuget\\packages\\microsoft.extensions.identity.stores\\6.0.0\\microsoft.extensions.identity.stores.6.0.0.nupkg.sha512",
     "C:\\Users\\İLKER GÖKŞEN\\.nuget\\packages\\microsoft.extensions.logging\\7.0.0\\microsoft.extensions.logging.7.0.0.nupkg.sha512",
     "C:\\Users\\İLKER GÖKŞEN\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.0\\microsoft.extensions.logging.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\İLKER GÖKŞEN\\.nuget\\packages\\microsoft.extensions.options\\7.0.0\\microsoft.extensions.options.7.0.0.nupkg.sha512",

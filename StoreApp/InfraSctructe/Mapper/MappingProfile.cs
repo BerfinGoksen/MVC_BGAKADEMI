@@ -1,7 +1,7 @@
 using AutoMapper;
 using Entities.Dtos;
 using Entities.Models;
-
+using Microsoft.AspNetCore.Identity;
 namespace StoreApp.InfraSctructe.Mapper
 {
     public class MappingProfile : Profile
@@ -10,6 +10,8 @@ namespace StoreApp.InfraSctructe.Mapper
         {
             CreateMap<ProductDtoForInsertion, Product>();
             CreateMap<ProductDtoForUpdate, Product>().ReverseMap();
+            CreateMap<UserDtoForCreation, IdentityUser>();
+            CreateMap<UserDtoForUpdate, IdentityUser>().ReverseMap();
         }
     }
 }
